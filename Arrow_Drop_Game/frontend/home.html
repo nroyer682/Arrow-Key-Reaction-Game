@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Natalie Royer and Stefan Kupiak">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game: Arrow Drop</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer="true"></script>
+    </head>
+    <body onload="activateButton()">
+    <!-- Home Page -->
+        <section id="home" class="active">
+            <h2>ENTER PLAYER NAME</h2>
+            <input id="player" type="text" placeholder="Ex: Player125">
+            <p><button id="start-button">Start!</button></p>
+        </section>
+    
+    <!-- Instruction Page -->
+        <section id="instructions" class="hidden">
+            <h2>HOW TO PLAY</h2>
+            <div class="instruction-box">
+
+                <div class="instructions-left">
+                    <ul class="instructions-list">
+                        <li>Use the arrow keys on your keyboard to match the direction of the falling arrows</li>
+                        <li>Press the correct key before the arrow reaches the bottom of the screen to score points</li>
+                        <li>You will have three lives at the start.</li>
+                        <li>Be careful! Missing an arrow will cost you a life</li>
+                        <li>As you level up, the arrows will fall faster and faster!</li>
+                        <li>The game ends once you've lost all your lives</li>
+                    </ul>
+                </div>
+                <div class="instructions-right">
+                    <img src="https://media.istockphoto.com/id/173938180/photo/arrow-keys.jpg?s=612x612&w=0&k=20&c=j8pNizK4ZfKTAA_7kPn1OeZC0-jbh1RlwEuD5r7Ody4=" alt="Arrow keys">
+                </div>
+                
+            </div>
+            <h3>Press any key to continue!</h3>
+        </section>
+
+    <!-- Game -->
+        <section id="game" class="hidden">
+
+            <!-- Top Row -->
+            <div class="top-row">
+                <div class="score"> Score: 0 </div>
+                <div class="lives-pause">
+                    <span class="lives"> Lives: ❤️ ❤️ ❤️ </span>
+                    <button class="pause-button"> | | </button>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="pause-overlay hidden">
+                    <h2>PAUSED</h2>
+                    <div><button class="resume-button"> ▶️ </button></div>
+                    <div><button class="restart-button"> Restart </button></div>
+                </div>
+                <!-- Countdown -->
+                <div class="container"> 
+                    <div class="countdown hidden"></div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="bottom-row">
+                <div class="player-name"> <span id="player-name-display"></span></div>
+                <div class="level"> Level 1 </div>
+                
+            </div>
+
+        </section>
+
+        <div id="level-up" class="hidden"></div>
+
+    <!-- Score Board -->
+        <section id="scoreboard" class="hidden">
+        </section>
+    </body>
+</html>

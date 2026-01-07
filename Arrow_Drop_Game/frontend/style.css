@@ -1,0 +1,276 @@
+/* By Natalie Royer & Stefan Kupiak */
+
+/* General Styling */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(120deg, rgb(14, 230, 194), rgb(24, 195, 226), rgb(0, 149, 255), rgb(187, 142, 255));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Home Page */
+#home {
+    margin-top: 20%;
+}
+
+/* Player Name Input Box */
+input {
+    width: 250px;
+    height: 35px;
+    border: 2px solid purple;
+    border-radius: 10px;
+}
+
+#start-button {
+    border: 2px solid blueviolet;
+    background-color: rgb(119, 222, 203);
+    width: 100px;
+    height: 50px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: rgb(77, 207, 103);
+}
+
+
+
+/* Instructions Page */
+.instruction-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    opacity: 0.8;
+    background-color: rgb(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+.instructions-left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.instructions-right {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+#instructions img {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.instructions-list {
+    padding: 20px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+}
+
+
+/* Game Area */
+
+/* Countdown */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.countdown {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    width: 125px;
+    font-size: 50px;
+    border: 2px solid green;
+    padding: 20px 0;
+    line-height: 1.5;
+}
+
+/* Top Section of Game Area */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.lives-pause {
+    text-align: right;
+    margin: 10px;
+}
+
+.pause-button {
+    background-color: light grey;
+    font-weight: 1000;
+    border-color: light grey;
+    border-radius: 5px;
+}
+
+/* Pause Overlay */
+.pause-overlay {
+    height: 500px;
+    margin-top: 20%;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.resume-button {
+    background-color: rgb(24, 195, 226);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.resume-button:hover {
+    background-color: rgb(77, 207, 103);
+}
+
+.restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: #fff;
+    border: 2px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: blue;
+}
+
+
+/* Botton Section of Game Area */
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+} 
+
+.score {
+    text-align: left;
+    margin: 10px;
+}
+
+
+.level {
+    margin: 10px;
+}
+
+.player-name {
+    margin: 10px;
+}
+
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: -50px;
+    font-size: 50px;
+}
+
+@keyframes fall {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+.arrow {
+    animation: fall 3s linear;
+}
+
+/* Level Up Display */
+#level-up {
+    font-size: 50px;
+    background-color: rgb(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Leaderboard Page */
+.leaderboard-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.leaderboard-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table thead {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.leaderboard-table tr:hover {
+    background-color: #ddd;
+}
+
+.btn-restart {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-restart:hover {
+    background-color: #c0392b;
+}
